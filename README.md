@@ -7,10 +7,12 @@
 | Name        | Default             | Description                  |
 | ----        | -------             | -----------                  |
 | PORT        | 9000                | Port server should listen on |
+| MONGODB_URI | mongodb://localhost | Mongo connection info        |
 
 ## Heroku Deploy
 
 ```sh
 heroku apps:create spinner
-git push heroku
+heroku addons:create mongolab
+git push heroku master
 ```
